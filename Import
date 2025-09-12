@@ -1,4 +1,4 @@
-global:
+iglobal:
   scrape_interval: 15s
 
 scrape_configs:
@@ -19,3 +19,6 @@ docker run -d --name prometheus \
   -p 9090:9090 \
   -v ~/monitoring/prometheus.yml:/etc/prometheus/prometheus.yml \
   prom/prometheus
+
+mkdir -p /var/lib/jenkins/monitoring
+nano /var/lib/jenkins/monitoring/prometheus.yml
